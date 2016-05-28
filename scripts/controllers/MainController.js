@@ -17,10 +17,14 @@
 	            $templateCache.remove(current.templateUrl);
 	    	}
 	    	$('#slaask-button').addClass('hide');
+<<<<<<< HEAD
 	    	$timeout(function() {
 				$scope.playerHeight = $('.player-bar').height();
 	        }, 1);
 	    	
+=======
+	    	$('.slaask-message').addClass('hide');	
+>>>>>>> f4a16ae86d1a28f521ff5de4a027672ba0eeb559
 		});
 
 		$scope.$on('stopAudio', function(next, current) {
@@ -38,7 +42,8 @@
 					_slaask.init('5de41f8d3e3bf771cc8ac707c8502535');
 					activeHelper = true;
 				}
-				$('#slaask-button').toggleClass('hide');			
+				$('#slaask-button').toggleClass('hide');
+				$('.slaask-message').toggleClass('hide');			
 			}
 			else{
 				window.history.back();
