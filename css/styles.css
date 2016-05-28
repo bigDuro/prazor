@@ -141,7 +141,7 @@ nav{
 }
 .station-info__name{
 	font-size: 1.5em;
-	line-height: 3em;
+	margin-top:.5em;
 }
 .station-songBar{
 	background-color: rgba(0,0,0, 0.7);
@@ -160,7 +160,9 @@ nav{
     width: 100%;
     z-index: 2;
 }
-
+.playPause{
+	padding: 1em 0;
+}
 .player-volume-control{
 	display: none;
 }
@@ -383,22 +385,20 @@ ul[rn-carousel] {
 	.player-view-large .previous, .player-view-large .forward{
 		line-height:5em;
 	}
-	.player-play-pause{
+	.player-view-large .player-play-pause{
 		width: 100%;
 	}
 
 	.player-bar{
-		height: 85px;
 	}
 	.player-view-large .player-bar{
     	height: 30%;
 	}
 	
-	.station-songBar{		
-	    bottom: 85px;
+	.station-songBar{
 	}
 	.player-view-large .station-songBar{
-	    bottom: 0;
+	    bottom: 0 !important;
 	}
 
 }
@@ -440,7 +440,6 @@ ul[rn-carousel] {
 		margin-top: 1em;
 	}
 	.player-bar{
-		height: 100px;
 	}
 	.station-songBar{
 		bottom: 100px;

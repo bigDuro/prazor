@@ -4,7 +4,9 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'scripts/directives/audioPlayerBar/view/audioPlayerBar.html',
-			scope: {},
+			scope: {
+				playerHeight: '='
+			},
 			link: function(scope, element, attr){
 
 				var timer;
@@ -49,6 +51,7 @@
 							timer = $timeout(function() {
 			                    getStationPlaylistDetails(scope.currentStation.station);
 			                }, timeout);
+			                scope.playerHeight = $(element).find('.player-bar').height();
 						}
 						else{
 							$timeout.cancel(timer);
@@ -56,8 +59,6 @@
 			                    getStationPlaylistDetails(scope.currentStation.station);
 			                }, 5000);
 						}
-						
-
 
 				}
 
@@ -127,10 +128,8 @@
 					DataFactory.currentStation.station = {};
 					$timeout.cancel(timer);
 				}
-				
 				scope.currentStation = DataFactory.currentStation;
 				scope.hidePlayerBar = true;
-
 				// Watches Index to change station
 				scope.$watch('currentStation.$index', function (index, oldIndex) {
 					if (index !== oldIndex && DataFactory.currentStation.stations) {

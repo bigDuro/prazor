@@ -17,6 +17,10 @@
 	            $templateCache.remove(current.templateUrl);
 	    	}
 	    	$('#slaask-button').addClass('hide');
+	    	$timeout(function() {
+				$scope.playerHeight = $('.player-bar').height();
+	        }, 1);
+	    	
 		});
 
 		$scope.$on('stopAudio', function(next, current) {
@@ -56,6 +60,7 @@
 	    $scope.$watch($scope.getOrientation, function(newValue, oldValue){
 	        $scope.orientation = newValue;
 	        $scope.stickyNavHeight = $('.headerContaner').height();
+	        $scope.playerHeight = $('.player-bar').height();
 	    }, true);
 
 		$timeout(function() {

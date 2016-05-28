@@ -1,4 +1,4 @@
-<div class="span-1-1 station-songBar" ng-show="currentStation.station.song.title && !hidePlayerBar">
+<div class="span-1-1 station-songBar" style="bottom:{{playerHeight}}px" ng-show="currentStation.station.song.title && !hidePlayerBar">
 	<p class="color-white station-songBar__info no-margin">
 		<marquee>
 			<span ng-show="currentStation.station.song.title" class="b" ng-bind-html="currentStation.station.song.title"></span>, 
@@ -14,8 +14,17 @@
 			<div class="span-1-4">
 				<img class="flex-img" ng-src="{{currentStation.station.song.cover || currentStation.station.station_image}}">
 			</div>
-			<p class="span-3-4 c no-pad no-margin color-gold uppercase station-info__name align-self-center">{{currentStation.station.station_name}}</p>
+			<div class="span-3-4 c no-pad ">
+				<p class="c no-margin color-gold uppercase station-info__name align-self-center">{{currentStation.station.station_name}}</p>
+				<div class="grid">
+					<div class="span-1-1">
+						<share-this></share-this>
+					</div>
+				</div>
+			</div>
+			
 		</div>
+
 	</div>
 
 	<div class="span-1-1 player-subtitle top-space show-on-mobile">
