@@ -10,12 +10,12 @@
 
 <div class="grid player-bar no-pad" ng-hide="hidePlayerBar">	
 	<div class="station-info span-4-5-xs span-4-5-sm show-on-mobile no-pad top-space">
-		<div class="color-white show-on-mobile">
+		<div class="color-white show-on-mobile displayFlex">
 			<div class="span-1-4">
 				<img class="flex-img" ng-src="{{currentStation.station.song.cover || currentStation.station.station_image}}">
 			</div>
-			<div class="span-3-4 c no-pad ">
-				<p class="c no-margin color-gold uppercase station-info__name align-self-center">{{currentStation.station.station_name}}</p>
+			<div class="span-3-4 c no-pad align-self-center">
+				<p class="c no-margin color-gold uppercase station-info__name">{{currentStation.station.station_name}}</p>
 				<div class="grid">
 					<div class="span-1-1">
 						<share-this></share-this>
@@ -53,7 +53,7 @@
 		</ul>
 	</div>
 
-	<div class="station-details span-2-3-md hide-on-mobile no-pad">
+	<div class="station-details span-2-3-md hide-on-mobile no-pad align-self-center">
 		<div class="color-white top-space hide-on-mobile left-space pad-left">
 			<ul class="pad">
 				<li class="details color-grey no-margin">Your're Listening to: <span class="color-white b">{{currentStation.genre.title}} {{currentStation.station.station_name}}</span></li>

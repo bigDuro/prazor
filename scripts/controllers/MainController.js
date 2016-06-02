@@ -16,15 +16,13 @@
 		    if (typeof(current) !== 'undefined'){
 	            $templateCache.remove(current.templateUrl);
 	    	}
-	    	$('#slaask-button').addClass('hide');
-<<<<<<< HEAD
+	    	
 	    	$timeout(function() {
 				$scope.playerHeight = $('.player-bar').height();
 	        }, 1);
-	    	
-=======
-	    	$('.slaask-message').addClass('hide');	
->>>>>>> f4a16ae86d1a28f521ff5de4a027672ba0eeb559
+
+	        $('#slaask-button').addClass('hide');
+	    	$('.slaask-message').addClass('hide');
 		});
 
 		$scope.$on('stopAudio', function(next, current) {

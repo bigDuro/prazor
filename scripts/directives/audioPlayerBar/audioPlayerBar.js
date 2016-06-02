@@ -130,6 +130,7 @@
 				}
 				scope.currentStation = DataFactory.currentStation;
 				scope.hidePlayerBar = true;
+				scope.playerHeight = $(element).find('.player-bar').height();
 				// Watches Index to change station
 				scope.$watch('currentStation.$index', function (index, oldIndex) {
 					if (index !== oldIndex && DataFactory.currentStation.stations) {

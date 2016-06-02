@@ -12,7 +12,9 @@
 			if(isPlayerView){
 				$location.url('music/audioplayer');
 			}
-			setStation(details);
+			if(DataFactory.currentStation.station.station_id !== details.station.station_id){
+				setStation(details);
+			}
 			station.state = 'play';
 		};
 		
@@ -23,6 +25,8 @@
 			DataFactory.station = details.station;
 			DataFactory.currentStation.stations = details.stations;
 			DataFactory.currentStation.$index = (details.index >= 0) ? details.index : $scope.currentStation.$index;
+			$scope.genre = DataFactory.currentStation.genre;
+			DataFactory.genre = $scope.genre;
 			
 			$scope.hidePlayerBar = false;
 			$scope.station = details.station;
@@ -35,6 +39,7 @@
 			else{
 				$scope.currentStation = DataFactory.currentStation;
 				$scope.station = DataFactory.currentStation.station;
+				$scope.genre = DataFactory.genre;
 				var entryID = DataFactory.currentStation.genre.entry_id,
 					config = {
 					method : 'GET',

@@ -386,7 +386,7 @@ ul[rn-carousel] {
 		line-height:5em;
 	}
 	.player-view-large .player-play-pause{
-		width: 100%;
+		width: 60%;
 	}
 
 	.player-bar{
@@ -457,6 +457,9 @@ ul[rn-carousel] {
 	}
 }
 
+.displayFlex{
+	display: flex !important;
+}
 
 /*element.style {
     display: inline-block;
